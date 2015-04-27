@@ -7,7 +7,7 @@ describe('How the program runs via Sinatra', {:type => :feature}) do
     visit('/')
     fill_in('parcel_height', :with => "5")
     fill_in('parcel_length', :with => "10")
-    fill_in('parcel_width'. :with => "10")
+    fill_in('parcel_width', :with => "10")
     fill_in('parcel_weight', :with => "10")
     click_button('Send')
     expect(page).to have_content("60")
