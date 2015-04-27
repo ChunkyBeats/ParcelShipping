@@ -9,7 +9,9 @@ describe('How the program runs via Sinatra', {:type => :feature}) do
     fill_in('parcel_length', :with => "10")
     fill_in('parcel_width', :with => "10")
     fill_in('parcel_weight', :with => "10")
+    select "next day", from: "parcel_speed"
+    select "domestic", from: "parcel_distance"
     click_button('Send')
-    expect(page).to have_content("60")
+    expect(page).to have_content("180")
   end
 end
